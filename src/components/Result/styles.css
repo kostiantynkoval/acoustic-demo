@@ -1,0 +1,176 @@
+.Result-wrapper {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.Title-wrapper {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: baseline;
+  margin-bottom: 8px;
+}
+@media screen and (min-width: 600px) {
+  .Title-wrapper {
+    justify-content: flex-start;
+    flex-flow: row nowrap;
+  }
+}
+
+.Title-wrapper h1 {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+@media screen and (min-width: 600px) {
+  .Title-wrapper h1 {
+    margin-right: 8px;
+  }
+}
+
+.MainImage-wrapper .caption {
+  display: flex;
+  align-items: center;
+}
+
+.MainImage-wrapper .caption span:first-child {
+  width: 20px;
+  height: 20px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.MainImage-Data-container {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+@media screen and (min-width: 900px) {
+  .MainImage-Data-container {
+    flex-flow: row nowrap;
+  }
+}
+
+.MainImage-container {
+  width: 100%;
+}
+
+@media screen and (min-width: 900px) {
+  .MainImage-container {
+    width: 65%;
+  }
+}
+
+.MainImage-container img{
+  width: 100%;
+
+}
+
+.ProfileImages-container {
+  width: 100%;
+  margin-bottom: 16px;
+  display: flex;
+  flex-flow: column nowrap;
+}
+@media screen and (min-width: 900px) {
+  .ProfileImages-container {
+    margin-left: 16px;
+    margin-bottom: 0;
+    width: 30%;
+  }
+}
+
+.OtherImages-container {
+  display: flex;
+  flex-flow: column nowrap;
+}
+@media screen and (min-width: 600px) {
+  .OtherImages-container {
+    flex-flow: row nowrap;
+    justify-content: space-between;
+  }
+}
+@media screen and (min-width: 900px) {
+  .OtherImages-container {
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    flex: 1;
+  }
+}
+
+.OtherImages-container .LeadImage-container {
+  width: 80%;
+  display: flex;
+  flex-flow: column nowrap;
+}
+@media screen and (min-width: 600px) {
+  .OtherImages-container .LeadImage-container {
+    width: 57%
+  }
+}
+@media screen and (min-width: 900px) {
+  .OtherImages-container .LeadImage-container {
+    width: 100%
+  }
+}
+
+.OtherImages-container .LeadImage-container img {
+  width: 100%;
+}
+
+.OtherImages-container .CardImage-container {
+  width: 60%;
+  display: flex;
+  flex-flow: column nowrap;
+  margin-top: 8px;
+}
+@media screen and (min-width: 600px) {
+  .OtherImages-container .CardImage-container {
+    width: 40%;
+    margin-top: 0;
+  }
+}
+@media screen and (min-width: 900px) {
+  .OtherImages-container .CardImage-container {
+    width: 80%;
+    margin-top: 0;
+  }
+}
+
+.OtherImages-container .CardImage-container img {
+  width: 100%;
+}
+
+.MainImage-caption h4,
+.MainImage-credit h4 {
+  margin-top: 0;
+}
+
+
+.AuthorName-wrapper {
+
+}
+
+.DateTime-wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 280px;
+}
+
+.DateTime-wrapper h4 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.Body-wrapper {
+  margin-bottom: 16px;
+}
+
+.Body-wrapper .CKEditor-wrapper{
+  margin-top: 16px;
+}

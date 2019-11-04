@@ -1,0 +1,44 @@
+.Input-wrapper {
+  display: flex;
+  flex-flow: column nowrap;
+}
+.Input-row-container {
+  display: flex;
+  flex-flow: column nowrap;
+  height: 30px;
+  margin-top: 16px;
+  justify-content: stretch;
+}
+.Input-row {
+  display: flex;
+  height: 100%;
+  flex-flow: row nowrap;
+  justify-content: stretch;
+  align-items: center;
+}
+.Input-row label{
+  flex: 0 1 80px;
+}
+.Input-row input{
+  box-sizing: border-box;
+  height: 100%;
+  flex: 1;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+.Submit-button {
+  height: 100%;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  color: #f0f8ff;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+  background: #00796B;
+}
+
+.Submit-button:hover {
+  background: #004D40;
+}
