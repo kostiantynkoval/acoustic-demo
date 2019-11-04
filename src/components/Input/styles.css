@@ -5,13 +5,12 @@
 .Input-row-container {
   display: flex;
   flex-flow: column nowrap;
-  height: 30px;
   margin-top: 16px;
   justify-content: stretch;
 }
 .Input-row {
   display: flex;
-  height: 100%;
+  height: 30px;
   flex-flow: row nowrap;
   justify-content: stretch;
   align-items: center;
@@ -27,7 +26,7 @@
   padding-right: 8px;
 }
 .Submit-button {
-  height: 100%;
+  height: 30px;
   outline: none;
   border: none;
   border-radius: 5px;
