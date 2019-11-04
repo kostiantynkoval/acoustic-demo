@@ -1,6 +1,7 @@
 .Result-wrapper {
   display: flex;
   flex-flow: column nowrap;
+  margin-top: 8px;
 }
 
 .Title-wrapper {

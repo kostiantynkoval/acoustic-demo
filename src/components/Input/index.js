@@ -17,11 +17,20 @@ const Input = ({onResponse, history}) => {
       fetch(inputValue)
         .then(res => res.json())
         .then(res => {
+          console.log("res", res)
+          if(!!res.errors && res.errors.length) {
+            history.push('/not-found')
+            alert('Fetching data is faled!' + res.message)
+          }
           onResponse(res, inputValue);
           setIsLoading(false)
           history.push('/result')
         })
-        .catch(err => history.push('/not-found'))
+        .catch(err => {
+          console.log("Error", err)
+          history.push('/not-found')
+          alert('Fetching data is faled!')
+        })
     } else {
       setErrorMessage('Wrong URL')
     }

@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react';
+import {NavLink} from "react-router-dom";
 import CKEditor from '@ckeditor/ckeditor5-react';
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 import './styles.css'
@@ -20,6 +21,7 @@ const Result = ({jsonValue, history}) => {
   
   return !!jsonValue && jsonValue.hasOwnProperty('name') ? (
     <div className="Result-wrapper">
+      <NavLink to='/input'>Input New URL</NavLink>
       <div className="Title-wrapper">
         <h1>Name: {jsonValue.elements.heading.value}</h1>
         <span>Status: {jsonValue.status}</span>
@@ -39,7 +41,10 @@ const Result = ({jsonValue, history}) => {
             <div className="MainImage-Data-container">
               <div className="MainImage-container">
                 <div><span>Image: </span><a href={`${apiUrl}/${jsonValue.elements.mainImage.value.leadImage.url.split('/')[1]}/${jsonValue.elements.mainImage.value.leadImage.renditions.default.source}`}>{jsonValue.elements.mainImage.value.leadImage.asset.fileName}</a></div>
-                <img src={`${apiUrl}/${jsonValue.elements.mainImage.value.leadImage.url.split('/')[1]}/${jsonValue.elements.mainImage.value.leadImage.renditions.default.source}`} alt=""/>
+                <img
+                  src={`${apiUrl}/${jsonValue.elements.mainImage.value.leadImage.url.split('/')[1]}/${jsonValue.elements.mainImage.value.leadImage.renditions.default.source}`}
+                  alt={`${jsonValue.elements.mainImage.value.leadImage.asset.altText}|size=${jsonValue.elements.mainImage.value.leadImage.renditions.default.width}x${jsonValue.elements.mainImage.value.leadImage.renditions.default.height}`}
+                />
               </div>
               <div className="ProfileImages-container">
                 <div className="caption" onClick={toggleProfileLeadImage}>
@@ -56,12 +61,18 @@ const Result = ({jsonValue, history}) => {
                     <div className="OtherImages-container">
                       <div className="LeadImage-container">
                         <em>Lead</em>
-                        <img src={`${apiUrl}/${jsonValue.elements.mainImage.value.leadImage.url.split('/')[1]}/${jsonValue.elements.mainImage.value.leadImage.renditions.lead.source}`} alt=""/>
+                        <img
+                          src={`${apiUrl}/${jsonValue.elements.mainImage.value.leadImage.url.split('/')[1]}/${jsonValue.elements.mainImage.value.leadImage.renditions.lead.source}`}
+                          alt={`${jsonValue.elements.mainImage.value.leadImage.asset.altText}|size=${jsonValue.elements.mainImage.value.leadImage.renditions.lead.width}x${jsonValue.elements.mainImage.value.leadImage.renditions.lead.height}`}
+                        />
                         <em>Dimentions: {jsonValue.elements.mainImage.value.leadImage.renditions.lead.width} x {jsonValue.elements.mainImage.value.leadImage.renditions.lead.height} pixels</em>
                       </div>
                       <div className="CardImage-container">
                         <em>Card</em>
-                        <img src={`${apiUrl}/${jsonValue.elements.mainImage.value.leadImage.url.split('/')[1]}/${jsonValue.elements.mainImage.value.leadImage.renditions.card.source}`} alt=""/>
+                        <img
+                          src={`${apiUrl}/${jsonValue.elements.mainImage.value.leadImage.url.split('/')[1]}/${jsonValue.elements.mainImage.value.leadImage.renditions.card.source}`}
+                          alt={`${jsonValue.elements.mainImage.value.leadImage.asset.altText}|size=${jsonValue.elements.mainImage.value.leadImage.renditions.card.width}x${jsonValue.elements.mainImage.value.leadImage.renditions.card.height}`}
+                        />
                         <em>Dimentions: {jsonValue.elements.mainImage.value.leadImage.renditions.card.width} x {jsonValue.elements.mainImage.value.leadImage.renditions.card.height} pixels</em>
                       </div>
                     </div>
