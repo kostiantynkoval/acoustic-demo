@@ -22,7 +22,6 @@
   margin-top: 8px;
   margin-bottom: 8px;
 }
-
 @media screen and (min-width: 600px) {
   .Title-wrapper h1 {
     margin-right: 8px;
@@ -48,7 +47,6 @@
   display: flex;
   flex-flow: column nowrap;
 }
-
 @media screen and (min-width: 900px) {
   .MainImage-Data-container {
     flex-flow: row nowrap;
@@ -58,7 +56,6 @@
 .MainImage-container {
   width: 100%;
 }
-
 @media screen and (min-width: 900px) {
   .MainImage-container {
     width: 65%;
@@ -148,11 +145,6 @@
 .MainImage-caption h4,
 .MainImage-credit h4 {
   margin-top: 0;
-}
-
-
-.AuthorName-wrapper {
-
 }
 
 .DateTime-wrapper {
